@@ -20,11 +20,14 @@ func Run() {
 		port = ":" + portenv
 
 		app := fiber.New()
+
+		// Return global statistics
 		app.Get("/", func(c *fiber.Ctx) error {
-			return c.SendString("Hello, World!")
+			return nil
 		})
+
 		app.Listen(port)
 	} else {
-		os.Exit(385)
+		os.Exit(129)
 	}
 }

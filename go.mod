@@ -2,7 +2,10 @@ module virtc
 
 go 1.17
 
-require github.com/gofiber/fiber/v2 v2.21.0
+require (
+	github.com/go-sql-driver/mysql v1.6.0
+	github.com/gofiber/fiber/v2 v2.21.0
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.2 // indirect
