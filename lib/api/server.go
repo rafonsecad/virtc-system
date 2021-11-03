@@ -13,7 +13,7 @@ var (
 
 func Run() {
 
-	portenv = os.Getenv("PORT")
+	portenv = os.Getenv("VIRTC_API_PORT")
 
 	if portenv != "" {
 
