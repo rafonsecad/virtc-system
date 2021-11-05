@@ -1,0 +1,32 @@
+{
+  "name": "virtc-system",
+  "version": "0.0.0",
+  "description": "The system that manages a centralized digital currency.",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "ts-node ./src/main.ts",
+    "dev": "nodemon ./src/*.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvtsum/virtc-system.git"
+  },
+  "keywords": [
+    "virtc",
+    "VTC",
+    "vtc",
+    "system"
+  ],
+  "author": "Daniel Morales",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lvtsum/virtc-system/issues"
+  },
+  "homepage": "https://github.com/lvtsum/virtc-system#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
