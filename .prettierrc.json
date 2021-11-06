@@ -6,7 +6,7 @@
         {
             "files": ["./src/*.ts", "./tests/*.test.ts"],
             "options": {
-                "semi": false,
+                "semi": true,
                 "parser": "typescript"
             }
         }
