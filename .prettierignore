@@ -3,3 +3,4 @@ coverage
 dist/
 *.js
 *.md
+.dbdiagram.io/

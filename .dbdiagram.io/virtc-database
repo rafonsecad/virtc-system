@@ -1,0 +1,13 @@
+table bank {
+  cap INT
+  tco INT
+}
+
+table users {
+  UUID VARCHAR(36)
+  nickname VARCHAR(14)
+  entry TIMESTAMP
+  PRIMARY KEY(UUID)
+}
+
+// https://dbdiagram.io/d/6182118ed5d522682df61228
