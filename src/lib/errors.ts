@@ -1,4 +1,4 @@
-import errorsCodes from '../Constants/errors_codes';
+import { errorsCodes } from '../Constants/errors_codes';
 
 /**
  * Create a new error according to the code.
