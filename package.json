@@ -18,7 +18,7 @@
         "vtc",
         "system"
     ],
-    "author": "Daniel Morales",
+    "author": "Daniel M. Jaén",
     "license": "AGPL-3.0-or-later",
     "bugs": {
         "url": "https://github.com/lvtsum/virtc-system/issues"
