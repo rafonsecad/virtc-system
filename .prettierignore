@@ -4,3 +4,4 @@ dist/
 *.js
 *.md
 .dbdiagram.io/
+src/db/templates/*
