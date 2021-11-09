@@ -1,13 +1,22 @@
-table bank {
-  cap INT
-  tco INT
+Table central_bank {
+  cap decimal [not null]
+  tco int [not null]
 }
 
-table users {
-  UUID VARCHAR(36)
-  nickname VARCHAR(14)
-  entry TIMESTAMP
-  PRIMARY KEY(UUID)
+Table users {
+  uuid varchar(36) [pk, not null]
+  nickname varchar(14) [not null]
+  entry TIMESTAMP [not null, default: `CURRENT_TIMESTAMP`]
+  money DECIMAL
 }
 
-// https://dbdiagram.io/d/6182118ed5d522682df61228
+Table transactions {
+  user_uuid varchar(36) [not null, ref: > users.uuid]
+  fp varchar(64) [pk, not null]
+  afp varchar(64) [not null]
+  tco INT [not null]
+}
+
+Ref: central_bank.tco > transactions.tco
+
+// dbdiagram.io/d/6182118ed5d522682df61228
