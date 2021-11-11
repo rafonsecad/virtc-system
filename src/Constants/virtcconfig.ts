@@ -1,5 +1,5 @@
 const vtcconfig: object | any = {
-    saltLength: 16
-}
+    saltLength: 16,
+};
 
-export default vtcconfig
+export default vtcconfig;

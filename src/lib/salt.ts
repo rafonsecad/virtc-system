@@ -1,6 +1,6 @@
 import crypto from 'crypto-js';
-import vtcconfig from '../Constants/virtcconfig'
-import Err from '../lib/errors'
+import vtcconfig from '../Constants/virtcconfig';
+import Err from '../lib/errors';
 
 /**
  * Makes a random salt.
@@ -24,8 +24,8 @@ class saltMaker {
             '@ł€¶ŧ←↓→øþ~æßðđŋħłĸ^«»¢“”nµ─·̣ΩŁΩ¢®Ŧ¥↑ıØÞÆ§ÐªŊĦ&Ł<>©‘’º×÷˙';
         let cl: number = c.length;
         if (vtcconfig.saltLength > 16) {
-            new Err(125, false).getError()
-            vtcconfig.saltLength = 16
+            new Err(125, false).getError();
+            vtcconfig.saltLength = 16;
         }
         for (var _i = 0; _i < vtcconfig.saltLength; _i++) {
             salt += c.charAt(Math.floor(Math.random() * cl));

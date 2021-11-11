@@ -6,6 +6,6 @@ export const errorsCodes: object | any = {
     },
     125: {
         code: 125,
-        content: 'Error (125):\n\tThe content length is incorrect.'
-    }
+        content: 'Error (125):\n\tThe content length is incorrect.',
+    },
 };
