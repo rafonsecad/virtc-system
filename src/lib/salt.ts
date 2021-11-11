@@ -1,4 +1,6 @@
-import { Base64 } from 'js-base64';
+import crypto from 'crypto-js';
+import vtcconfig from '../Constants/virtcconfig'
+import Err from '../lib/errors'
 
 /**
  * Makes a random salt.
@@ -10,29 +12,30 @@ import { Base64 } from 'js-base64';
  */
 
 class saltMaker {
-    l: number | undefined;
     s: boolean;
 
-    constructor(l: number | undefined, s: boolean) {
-        this.l = l;
+    constructor(s: boolean) {
         this.s = s;
     }
 
     New(): string {
-        if (this.l === undefined) this.l = 16;
         let salt: string = '';
         const c: string =
             '@ł€¶ŧ←↓→øþ~æßðđŋħłĸ^«»¢“”nµ─·̣ΩŁΩ¢®Ŧ¥↑ıØÞÆ§ÐªŊĦ&Ł<>©‘’º×÷˙';
         let cl: number = c.length;
-        for (var _i = 0; _i < this.l; _i++) {
+        if (vtcconfig.saltLength > 16) {
+            new Err(125, false).getError()
+            vtcconfig.saltLength = 16
+        }
+        for (var _i = 0; _i < vtcconfig.saltLength; _i++) {
             salt += c.charAt(Math.floor(Math.random() * cl));
         }
         if (this.s === true) {
-            return Base64.encode(salt, true);
+            return crypto.enc.Base64.stringify(crypto.enc.Utf8.parse(salt));
         } else {
             return salt;
         }
     }
 }
 
-export default saltMaker;
+export { saltMaker };
