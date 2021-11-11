@@ -1,4 +1,4 @@
-import { errorsCodes } from '../Constants/errors_codes';
+import { errorsCodes } from '../Constants/errors_codes'
 
 /**
  * Create a new error according to the code.
@@ -20,10 +20,12 @@ class Err {
     getError(): void | string {
         if (!this.s) this.s = false;
 
-        if (this.code === errorsCodes[423].code && this.s === false) {
-            console.error(errorsCodes[423].content);
-        } else if (this.code === errorsCodes[423].code && this.s === true) {
-            return errorsCodes[423].content;
+        if (this.s === false) {
+            console.error(errorsCodes[this.code].content);
+        } else {
+            return errorsCodes[this.code].content;
         }
     }
 }
+
+export default Err;
